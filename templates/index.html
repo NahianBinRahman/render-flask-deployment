@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask HTMX Tailwind</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+  </head>
+  <body class="bg-gray-100 p-10">
+    <div class="container mx-auto">
+      <h1 class="text-2xl font-bold mb-4">Flask with HTMX and Tailwind</h1>
+      <button
+        id="fetch-button"
+        hx-get="/get-data"
+        hx-target="#response"
+        hx-swap="innerHTML"
+        class="bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        Fetch Data
+      </button>
+      <div
+        id="response"
+        class="mt-4 p-4 border border-gray-300 bg-white rounded"
+      ></div>
+    </div>
+  </body>
+</html>
